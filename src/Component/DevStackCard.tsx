@@ -1,19 +1,22 @@
-import { useState } from "react";
+import { useState, type Dispatch, type SetStateAction } from "react";
 import type { Tech } from "./type";
 interface prpos {
   Tech: Tech;
+   techSelected:Tech[],
+   setTechSelected:Dispatch<SetStateAction<Tech[]>>
 }
 
-const DevStackCard = ({ Tech }: prpos) => {
+const DevStackCard = ({ Tech,techSelected,setTechSelected }: prpos) => {
   console.log(Tech);
-  const [isSelected, setisSelected] = useState(false);
+   const [isSelected, setisSelected] = useState(false);
 
   const handleButton = () => {
     setisSelected(true);
+    setTechSelected([...techSelected,Tech])
   };
 
   return (
-    <div className="group relative w-70 overflow-hidden rounded-2xl border border-slate-200 bg-white p-5 shadow-sm ">
+    <div className="group w-70 overflow-hidden rounded-2xl border border-slate-200 bg-white p-5 shadow-sm ">
       <div className="relative flex items-center justify-between">
         <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
           <img
@@ -60,15 +63,13 @@ const DevStackCard = ({ Tech }: prpos) => {
         </div>
       </div>
       <button
-        onClick={() => {
-          handleButton();
-        }}
-        disabled={isSelected}
+        onClick={()=>handleButton()}
+        disabled={isSelected }
         className={` mt-5 flex w-full items-center justify-center gap-2 rounded-xl bg-slate-950 px-4 py-3 text-sm font-semibold text-white
         ${isSelected ? "cursor-not-allowed bg-gray-500 opacity-70" : ""}
         `}
       >
-        {isSelected ? "✓ Selected" : " + Add to Stack"}
+        {isSelected? "✓ Selected" : " + Add to Stack"}
       </button>
     </div>
   );
