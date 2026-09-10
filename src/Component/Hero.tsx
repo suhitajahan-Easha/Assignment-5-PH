@@ -2,7 +2,7 @@ import hero from '../assets/banner-stack.png'
 
 const Hero = () => {
   return (
-    <div className="mx-auto max-w-350 flex justify-between items-center py-5">
+    <div className="mx-auto max-w-300 flex justify-between items-center py-10">
       <div>
         <h1 className='text-[55px] font-extrabold  leading-7.5'>Build Your Ideal</h1>
         <h1 className='text-[55px] font-extrabold  leading-normal bg-linear-to-r from-orange-500 via-pink-600 to-purple-700 bg-clip-text text-transparent'>Development Stack</h1>
@@ -16,7 +16,7 @@ const Hero = () => {
         </div>
       </div>
       <div>
-        <img src={hero} alt="hero-png" className='p-7' />
+        <img src={hero} alt="hero-png" className='-ml-5' />
       </div>
     </div>
   );
