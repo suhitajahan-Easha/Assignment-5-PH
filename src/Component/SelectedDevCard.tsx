@@ -1,6 +1,7 @@
 import type { Dispatch, SetStateAction } from "react";
 import type { Tech } from "./type";
 import { ImCross } from "react-icons/im";
+import { toast } from "react-toastify";
 
 interface props{
     p:Tech,
@@ -13,6 +14,16 @@ const SelectedDevCard = ({p,techSelected, setTechSelected}:props) => {
     const restTech = techSelected.filter(
       (filtertech) => filtertech.name != p.name,
     );
+    toast.error(`${p.name} is Deleted `, {
+          position: "bottom-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: false,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
    
     setTechSelected(restTech)
   }
@@ -31,7 +42,7 @@ const SelectedDevCard = ({p,techSelected, setTechSelected}:props) => {
           handledeleteTech();
         }}
       >
-        <ImCross></ImCross>
+        <ImCross className="text-gray-500"></ImCross>
       </span>
     </div>
   );

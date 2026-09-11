@@ -14,7 +14,7 @@ const DevStackCard = ({ Tech, techSelected, setTechSelected }: prpos) => {
   const handleButton = () => {
     setisSelected(true);
 
-    toast.success(`${Tech.name} is Selected Successfully`, {
+    toast.success(`${Tech.name} is Added to Stack Successfully`, {
       position: "bottom-right",
       autoClose: 5000,
       hideProgressBar: false,

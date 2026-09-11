@@ -1,2 +1,6 @@
 @import "tailwindcss";
-@plugin "daisyui";
+@theme {
+  --color-gradient-start: #f97316; /* orange-500 */
+  --color-gradient-middle: #db2777; /* pink-600 */
+  --color-gradient-end: #6d28d9;  /* violet-700 */
+}

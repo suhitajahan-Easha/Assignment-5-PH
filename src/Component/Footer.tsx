@@ -2,7 +2,7 @@ import logo from "../assets/logo-text.png";
 
 const Footer = () => {
   return (
-    <div className="mx-auto max-w-300 mt-50">
+    <div className="mx-auto max-w-300 mt-50 px-4 sm:px-6 lg:px-0">
       <div className=" flex justify-between  gap-10 w-287.5 ">
         <div className="">
           <img src={logo} alt="logo" className="mb-6" />
@@ -17,7 +17,7 @@ const Footer = () => {
             <li>LinkedIn</li>
           </ul>
         </div>
-        <div>
+        <div className="hidden md:block">
           <h1 className="font-semibold mb-5 text-[16px] uppercase">Product</h1>
           <ul className="text-gray-500 text-12px">
             <li>Home</li>
@@ -25,7 +25,7 @@ const Footer = () => {
             <li>Projects</li>
           </ul>
         </div>
-        <div>
+        <div className="hidden md:block">
           <h1 className="font-semibold mb-5 text-[16px] uppercase">Company</h1>
           <ul className="text-gray-500 text-12px">
             <li>About</li>
@@ -33,7 +33,7 @@ const Footer = () => {
             <li>Career</li>
           </ul>
         </div>
-        <div>
+        <div className="hidden md:block">
           <h1 className="font-semibold mb-5 text-[16[x]] uppercase ">Legal</h1>
           <ul className="text-gray-500 text-12px">
             <li>Privacy Policy</li>
@@ -41,11 +41,11 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <div className="flex justify-between mt-12 mb-5 text-[12px] text-slate-500">
+      <div className=" flex justify-between mt-12 mb-5 text-[12px] text-slate-500 max-w-[85%] mx-auto md:max-w-none">
         <div> © 2026 Dev Stack. All rights reserved.</div>
         <div className="flex gap-7">
-          <h1>Privacy</h1>
-          <h1>Terms</h1>
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
         </div>
       </div>
     </div>

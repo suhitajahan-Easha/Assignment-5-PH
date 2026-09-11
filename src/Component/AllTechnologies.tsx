@@ -13,11 +13,11 @@ const AllTechnologies = ({fetchedData}:props) => {
     //  console.log(data)
 
   return (
-    <div className="mx-auto max-w-300 mt-10">
-        <h1 className="font-extrabold text-[36px]">Explore the <span className="text-pink-500">Technologies</span></h1>
+    <div className="mx-auto max-w-300 mt-10 px-4 sm:px-6 lg:px-0">
+        <h1 className="font-extrabold text-[36px]">Explore the <span className="text-gradient-middle">Technologies</span></h1>
         <p>Pick one technology per category to build your ideal stack.</p>
-        <div className=" flex gap-10 my-9">
-            <div className="grid grid-cols-3 gap-6">{data.map((Tech:Tech)=>{ 
+        <div className=" flex flex-col md:flex-row gap-6 md:gap-10 my-6 md:my-9">
+            <div className="grid grid-cols-1 gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">{data.map((Tech:Tech)=>{ 
                 return <DevStackCard Tech={Tech} key={Tech.id} techSelected={techSelected} setTechSelected={setTechSelected} ></DevStackCard>})}
             </div>
             <div>
