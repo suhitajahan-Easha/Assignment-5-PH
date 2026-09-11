@@ -17,7 +17,7 @@ function App() {
  
 
   return (
-    <>
+    <div className='min-h-screen'>
     <Navbar></Navbar>
     <Hero></Hero>
     <Suspense fallback={<p>Loading.....</p>}>
@@ -26,7 +26,7 @@ function App() {
     
     <Footer></Footer>
     
-    </>
+    </div>
   )
 }
 

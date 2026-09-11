@@ -1,18 +1,31 @@
 import { useState, type Dispatch, type SetStateAction } from "react";
 import type { Tech } from "./type";
+import { toast } from "react-toastify";
 interface prpos {
   Tech: Tech;
-   techSelected:Tech[],
-   setTechSelected:Dispatch<SetStateAction<Tech[]>>
+  techSelected: Tech[];
+  setTechSelected: Dispatch<SetStateAction<Tech[]>>;
 }
 
-const DevStackCard = ({ Tech,techSelected,setTechSelected }: prpos) => {
+const DevStackCard = ({ Tech, techSelected, setTechSelected }: prpos) => {
   console.log(Tech);
-   const [isSelected, setisSelected] = useState(false);
+  const [isSelected, setisSelected] = useState(false);
 
   const handleButton = () => {
     setisSelected(true);
-    setTechSelected([...techSelected,Tech])
+
+    toast.success(`${Tech.name} is Selected Successfully`, {
+      position: "bottom-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
+
+    setTechSelected([...techSelected, Tech]);
   };
 
   return (
@@ -63,13 +76,13 @@ const DevStackCard = ({ Tech,techSelected,setTechSelected }: prpos) => {
         </div>
       </div>
       <button
-        onClick={()=>handleButton()}
-        disabled={isSelected }
+        onClick={() => handleButton()}
+        disabled={isSelected}
         className={` mt-5 flex w-full items-center justify-center gap-2 rounded-xl bg-slate-950 px-4 py-3 text-sm font-semibold text-white
         ${isSelected ? "cursor-not-allowed bg-gray-500 opacity-70" : ""}
         `}
       >
-        {isSelected? "✓ Selected" : " + Add to Stack"}
+        {isSelected ? "✓ Selected" : " + Add to Stack"}
       </button>
     </div>
   );

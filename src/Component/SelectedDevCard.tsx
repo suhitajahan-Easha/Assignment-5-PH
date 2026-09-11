@@ -13,7 +13,7 @@ const SelectedDevCard = ({p,techSelected, setTechSelected}:props) => {
     const restTech = techSelected.filter(
       (filtertech) => filtertech.name != p.name,
     );
-
+   
     setTechSelected(restTech)
   }
   
