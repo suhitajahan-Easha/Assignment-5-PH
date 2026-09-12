@@ -4,7 +4,7 @@ const Navbar = () => {
   return (
     <div className="sticky top-0 z-50 bg-white">
       <nav className=" mx-auto max-w-300 px-4 sm:px-6 lg:px-0 flex justify-between items-center py-5 text-gray-600  h-25">
-        <IoMenu className="sm:block md:hidden text-[30px]"/>
+        <IoMenu className="md:hidden text-[30px]"/>
         <img src={logo} alt="Navbar-logo" />
         <ul className="hidden md:flex justify-between gap-6 items-center">
           <li className="text-gradient-middle">Home</li>

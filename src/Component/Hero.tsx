@@ -4,9 +4,9 @@ const Hero = () => {
   return (
     <div className="mx-auto max-w-300 px-4 sm:px-6 lg:px-0 md:flex justify-between items-center py-10">
       <div>
-        <h1 className='text-[55px] font-extrabold  leading-7.5'>Build Your Ideal</h1>
-        <h1 className='text-[55px] font-extrabold  leading-normal bg-linear-to-r from-gradient-start via-gradient-middle to-gradient-end bg-clip-text text-transparent'>Development Stack</h1>
-        <p className='text-[18px] w-200 my-5 text-gray-600'>
+        <h1 className='text-[40px] md:text-[55px] font-extrabold md:leading-7.5'>Build Your Ideal</h1>
+        <h1 className='text-[40px] md:text-[55px] font-extrabold  leading-normal bg-linear-to-r from-gradient-start via-gradient-middle to-gradient-end bg-clip-text text-transparent'>Development Stack</h1>
+        <p className='text-[14px] md:text-[18px] w-200 my-5 text-gray-600'>
           Explore frontend, backend, database, and tooling options,<br /> compare them
           side by side, and put together the stack that fits your <br /> next project.
         </p>
