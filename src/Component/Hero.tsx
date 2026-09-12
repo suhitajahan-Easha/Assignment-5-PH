@@ -1,22 +1,37 @@
-import hero from '../assets/banner-stack.png'
+import hero from "../assets/banner-stack.png";
 
 const Hero = () => {
   return (
-    <div className="mx-auto max-w-300 px-4 sm:px-6 lg:px-0 md:flex justify-between items-center py-10">
-      <div>
-        <h1 className='text-[40px] md:text-[55px] font-extrabold md:leading-7.5'>Build Your Ideal</h1>
-        <h1 className='text-[40px] md:text-[55px] font-extrabold  leading-normal bg-linear-to-r from-gradient-start via-gradient-middle to-gradient-end bg-clip-text text-transparent'>Development Stack</h1>
-        <p className='text-[14px] md:text-[18px] w-200 my-5 text-gray-600'>
-          Explore frontend, backend, database, and tooling options,<br /> compare them
-          side by side, and put together the stack that fits your <br /> next project.
+    <div className="mx-auto flex max-w-300 flex-col items-center justify-between gap-10 px-4 py-10 sm:px-6 lg:px-0 md:flex-row md:gap-0">
+      <div className="w-full md:w-auto">
+        <h1 className="text-[40px] font-extrabold leading-tight sm:text-[48px] md:text-[55px] md:leading-7.5">
+          Build Your Ideal
+        </h1>
+        <h1 className="bg-linear-to-r from-gradient-start via-gradient-middle to-gradient-end bg-clip-text text-[40px] font-extrabold leading-tight text-transparent sm:text-[48px] md:text-[55px] md:leading-normal">
+          Development Stack
+        </h1>
+        <p className="my-5 w-full text-[14px] leading-6 text-gray-600 sm:text-[16px] md:w-200 md:text-[18px]">
+          Explore frontend, backend, database, and tooling options,
+          <br className="hidden md:block" />
+          compare them side by side, and put together the stack that fits your
+          <br className="hidden md:block" />
+          next project.
         </p>
-        <div className='mt-10 flex gap-3'>
-          <button className='rounded-md border bg-linear-to-r from-gradient-start to-gradient-middle text-white px-7 py-2'>Explore Technologies</button>
-          <button className='rounded-md border border-gray-300 px-7 py-2 text-gray-600'>Learn More</button>
+        <div className="mt-8 flex flex-wrap gap-3 md:mt-10">
+          <button className="rounded-md border bg-linear-to-r from-gradient-start to-gradient-middle px-5 py-2 text-sm text-white sm:px-7 sm:text-base">
+            Explore Technologies
+          </button>
+          <button className="rounded-md border border-gray-300 px-5 py-2 text-sm text-gray-600 sm:px-7 sm:text-base">
+            Learn More
+          </button>
         </div>
       </div>
-      <div>
-        <img src={hero} alt="hero-png" className='-ml-5' />
+      <div className="flex w-full justify-center md:w-auto md:justify-end">
+        <img
+          src={hero}
+          alt="hero-png"
+          className="w-full max-w-sm md:-ml-5 md:max-w-none"
+        />
       </div>
     </div>
   );
