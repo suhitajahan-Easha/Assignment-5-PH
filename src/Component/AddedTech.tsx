@@ -23,7 +23,7 @@ export const AddedTech = ({ techSelected, setTechSelected }: props) => {
   }
   if(techSelected.length===0){
   return(
-      <div className="w-70 overflow-hidden rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+      <div className="w-full lg:w-70 overflow-hidden rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
         <h1 className="text-[18px] font-bold text-black">Your Stack</h1>
         <p className="mb-5 text-6px text-gray-600">
           No Technologies Selected Yet
@@ -33,7 +33,7 @@ export const AddedTech = ({ techSelected, setTechSelected }: props) => {
   )
  }
   return (
-    <div className="w-70 overflow-hidden rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+    <div className="w-full lg:w-70 overflow-hidden rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
       <h1 className="text-[18px] font-bold text-black">Your Stack</h1>
       <p className="mb-5 text-6px text-gray-600">
         {techSelected.length} Technology Selected

@@ -29,8 +29,8 @@ const DevStackCard = ({ Tech, techSelected, setTechSelected }: prpos) => {
   };
 
   return (
-    <div className="group w-70 overflow-hidden rounded-2xl border border-slate-200 bg-white p-5 shadow-sm ">
-      <div className="relative flex items-center justify-between">
+    <div className=" w-full overflow-hidden rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:w-[320px] lg:w-70">
+      <div className="flex items-center justify-between">
         <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
           <img
             src={Tech.icon}
@@ -85,6 +85,7 @@ const DevStackCard = ({ Tech, techSelected, setTechSelected }: prpos) => {
         {isSelected ? "✓ Selected" : " + Add to Stack"}
       </button>
     </div>
+    
   );
 };
 

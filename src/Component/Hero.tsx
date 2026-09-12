@@ -2,8 +2,8 @@ import hero from "../assets/banner-stack.png";
 
 const Hero = () => {
   return (
-    <div className="mx-auto flex max-w-300 flex-col items-center justify-between gap-10 px-4 py-10 sm:px-6 lg:px-0 md:flex-row md:gap-0">
-      <div className="w-full md:w-auto">
+    <div className="mx-auto flex max-w-300 flex-col items-center justify-between gap-10 px-4 py-10 sm:px-6 lg:px-0 lg:flex-row sm:gap-0">
+      <div className="w-full sm:w-auto">
         <h1 className="text-[40px] font-extrabold leading-tight sm:text-[48px] md:text-[55px] md:leading-7.5">
           Build Your Ideal
         </h1>
