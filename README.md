@@ -108,8 +108,8 @@ React may not have difficulty efficiently updating the list and wont show a warn
 
 vi.What is conditional rendering? Show one place you used it (example: the empty stack message).
 Conditional rendering means displaying different UI depending on a condition.it allows us to show or hide UI based on the current state or another condition.In this project i use conditional rendering multiple times.
-For Example: {isSelected ? "✓ Selected" : " + Add to Stack"} 
-here first declare a state isSelected and updated its value using handle function ,when isSelected is true the Selected will be render on the ui if false Add to Stack will be render .
+For Example: {isSelected ? "✓Add to Stack " : "Add to Stack"} 
+here first declare a variable  isSelected and added condition in it, and updated its value using handle function ,when isSelected is true the first condition will be render on the ui if false Add to Stack will be render .
 
 vii.How do you pass data from a parent component to a child component, and how does a child send something back to the parent?
 
