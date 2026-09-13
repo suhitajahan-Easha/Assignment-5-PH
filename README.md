@@ -1,5 +1,5 @@
 🚀 DevStack
-DevStack is a modern and interactive web application that helps developers explore popular technologies across different categories such as Frontend, Backend, Database, Language, Styling, DevOps, and Tools.You and add technologies to your stack.
+DevStack is a modern and interactive web application that helps developers explore popular technologies across different categories such as Frontend, Backend, Database, Language, Styling, DevOps, and Tools.You can add technologies to your stack and also delete.
 
 🌐 Live: https://devstack-assignment-5-ph.netlify.app/
 
@@ -19,9 +19,10 @@ DevStack is a modern and interactive web application that helps developers explo
 
 
 
-
+<hr>
 
 Question Answer:
+
 i.What is JSX, and why is it used in React?
 
  JSX stands for JavaScript XML. It allows us to write HTML-like syntax directly inside JavaScript.
