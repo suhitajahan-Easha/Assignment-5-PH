@@ -16,7 +16,7 @@ const DevStackCard = ({ Tech, techSelected, setTechSelected }: prpos) => {
   );
 
   const handleButton = () => {
-    
+
     toast.success(`${Tech.name} is Added to Stack Successfully`, {
       position: "bottom-right",
       autoClose: 5000,
@@ -84,7 +84,7 @@ const DevStackCard = ({ Tech, techSelected, setTechSelected }: prpos) => {
         ${isSelected ? "cursor-not-allowed bg-gray-500 opacity-70" : ""}
         `}
       >
-        {isSelected ? "✓ Add to Stack" : "Add to Stack"}
+        {isSelected ? "✓ Added to Stack" : "Add to Stack"}
       </button>
     </div>
     
