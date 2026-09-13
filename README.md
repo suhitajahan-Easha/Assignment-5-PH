@@ -1,5 +1,5 @@
 🚀 DevStack
-DevStack is a modern and interactive web application that helps developers explore popular technologies across different categories such as Frontend, Backend, Database, Language, Styling, DevOps, and Tools
+DevStack is a modern and interactive web application that helps developers explore popular technologies across different categories such as Frontend, Backend, Database, Language, Styling, DevOps, and Tools.You and add technologies to your stack.
 
 🌐 Live: https://devstack-assignment-5-ph.netlify.app/
 

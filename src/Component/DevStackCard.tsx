@@ -1,4 +1,4 @@
-import { useState, type Dispatch, type SetStateAction } from "react";
+import { type Dispatch, type SetStateAction } from "react";
 import type { Tech } from "./type";
 import { toast } from "react-toastify";
 interface prpos {
@@ -9,11 +9,14 @@ interface prpos {
 
 const DevStackCard = ({ Tech, techSelected, setTechSelected }: prpos) => {
   console.log(Tech);
-  const [isSelected, setisSelected] = useState(false);
+  
+
+  const isSelected = techSelected.some(
+    selected => selected.id === Tech.id
+  );
 
   const handleButton = () => {
-    setisSelected(true);
-
+    
     toast.success(`${Tech.name} is Added to Stack Successfully`, {
       position: "bottom-right",
       autoClose: 5000,
@@ -27,9 +30,8 @@ const DevStackCard = ({ Tech, techSelected, setTechSelected }: prpos) => {
 
     setTechSelected([...techSelected, Tech]);
   };
-
   return (
-    <div className=" w-full overflow-hidden rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:w-[320px] lg:w-70">
+    <div className={` w-full overflow-hidden rounded-2xl border ${isSelected?"border-slate-500":"border-slate-200"} border-slate-200 bg-white p-5 shadow-sm sm:w-[320px] lg:w-70`}>
       <div className="flex items-center justify-between">
         <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
           <img
@@ -82,7 +84,7 @@ const DevStackCard = ({ Tech, techSelected, setTechSelected }: prpos) => {
         ${isSelected ? "cursor-not-allowed bg-gray-500 opacity-70" : ""}
         `}
       >
-        {isSelected ? "✓ Selected" : " + Add to Stack"}
+        {isSelected ? "✓ Add to Stack" : "Add to Stack"}
       </button>
     </div>
     
