@@ -97,7 +97,7 @@ git --version
 ### 1. Clone the repository
 
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
+git clone [(https://github.com/suhitajahan-Easha/Assignment-5-PH.git)]
 ```
 
 ### 2. Navigate to the project
